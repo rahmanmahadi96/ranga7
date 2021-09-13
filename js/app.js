@@ -17,6 +17,7 @@ const showProducts = (products) => {
     div.classList.add("product");
     div.innerHTML = `<div class="single-product">
       <div>
+      // <img> tags are self closing tags in html 
     <img class="product-image" src=${image}>
       </div>
       <h3>${product.title}</h3>
@@ -36,7 +37,7 @@ const addToCart = (id, price) => {
   count = count + 1;
   updatePrice("price", price);
   updateTaxAndCharge();
-  
+
   // total update error 
   updateTotal();
   document.getElementById("total-Products").innerText = count;
