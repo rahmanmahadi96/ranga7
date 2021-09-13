@@ -17,12 +17,12 @@ const showProducts = (products) => {
     div.classList.add("product");
     div.innerHTML = `<div class="single-product">
       <div>
-      // <img> tags are self closing tags in html 
+      // img tags are self closing tags in html
     <img class="product-image" src=${image}>
       </div>
       <h3>${product.title}</h3>
       <p>Category: ${product.category}</p>
-      // add ratings in the cart
+      // add ratings in the cart 
       <h5 class="mt-3">Rating: ${product.rating.rate} - (${product.rating.count} reviews)</h5>
       <h2>Price: $ ${product.price}</h2>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
