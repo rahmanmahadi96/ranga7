@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- site name  -->
   <title>BrandyMama</title>
   <!-- external css  -->
   <link rel="stylesheet" href="./css/style.css" />
@@ -23,7 +24,7 @@
   <!-- header section  -->
 
   <header>
-    <h1 class="text-light text-center mt-5 fs-3">Welcome to <span class="fs-1 text-info">Brandy</span>Mama</h1>
+    <h1 class="text-light text-center my-5 fs-3"><span class="fs-1 text-dark">Brandy</span>Mama</h1>
   </header>
 
   <!-- main section  --> 
@@ -32,9 +33,9 @@
 
     <!-- search field  -->
     <div class="search-field mb-5">
-      <div class="search-box d-flex justify-content-between">
-        <input id="input-field" class="search-field" type="text"/>
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
+      <div class="search-box d-flex justify-content-center">
+        <input id="input-field" class="search-field" type="text" placeholder="I'm shopping for ...."/>
+        <button type="button" class="btn btn-dark search-button" data-toggle="button" aria-pressed="false"
           autocomplete="off" id="search-btn" onclick="loadProducts()">
           Search
         </button>
@@ -45,7 +46,7 @@
 
     <div class="row">
       <div class="col-md-9 col-lg-9 col-sm-7">
-        <div id="all-products" class="">
+        <div id="all-products" >
           <!-- empty space error -->
           <!-- <h1></h1> -->
         </div>
@@ -65,6 +66,7 @@
               </tr>
             </thead>
             <tbody>
+              <!-- product quantity  -->
               <tr>
                 <th>Total Added-Products:</th>
                 <!-- added products error  -->
@@ -72,24 +74,28 @@
                 <td></td>
                 <td></td>
               </tr>
+              <!-- products sum  -->
               <tr>
                 <th>Price:</th>
                 <td>$ <span id="price">0</span></td>
                 <td></td>
                 <td></td>
               </tr>
+              <!-- delivery charge  -->
               <tr>
                 <th>Delivery-Charge:</th>
                 <td>$ <span id="delivery-charge">20</span></td>
                 <td></td>
                 <td></td>
               </tr>
+              <!-- tax  -->
               <tr>
                 <th>Total-Tax:</th>
                 <td>$ <span id="total-tax">0</span></td>
                 <td></td>
                 <td></td>
               </tr>
+              <!-- grand total  -->
               <tr>
                 <th scope="row">Total</th>
                 <td colspan="2">$ <span id="total">20</span></td>
@@ -98,7 +104,7 @@
             </tbody>
           </table>
           <div class="text-center">
-            <button class="btn btn-primary text-center">Buy Now</button>
+            <button class="btn btn-dark btn-lg">Buy Now</button>
           </div>
         </div>
       </div>
@@ -107,7 +113,7 @@
 
   <!-- footer section  -->
   <footer>
-    <p class="text-center text-light mt-5">BrandyMama&copy;2021</p>
+    <h4 class="text-center text-light mt-5">BrandyMama&copy;2021</h4>
   </footer>
 
   <!-- add javascript  file  -->

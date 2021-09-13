@@ -15,16 +15,19 @@ const showProducts = (products) => {
     const image = product.image;
     const div = document.createElement("div");
     div.classList.add("product");
-    div.innerHTML = `<div class="single-product">
+    div.innerHTML = `
+    <div class="single-product">
+
       <div>
-    <img class="product-image" src=${image}>
+      <img class="product-image" src="${image}">
       </div>
-      <h3>${product.title}</h3>
+      <h4 class="my-3">${product.title}</h4>
       <p>Category: ${product.category}</p>
-      <h5 class="mt-3">Rating: ${product.rating.rate} - (${product.rating.count} reviews)</h5>
-      <h2>Price: $ ${product.price}</h2>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-secondary">Details</button></div>
+      <h6 class="my-4">Rating: ${product.rating.rate} - (${product.rating.count} reviews)</h6>
+      <h4>Price: $${product.price}</h4>
+      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn text-light btn-dark rounded-pill fs-5 mt-3">Add to Cart</button>
+      
+    </div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
@@ -35,7 +38,6 @@ const addToCart = (id, price) => {
   count = count + 1;
   updatePrice("price", price);
   updateTaxAndCharge();
-
   // total update error 
   updateTotal();
   document.getElementById("total-Products").innerText = count;
@@ -58,6 +60,7 @@ const updatePrice = (id, value) => {
 };
 
 // set innerText function
+
 const setInnerText = (id, value) => {
   // 2 decimal precision 
   document.getElementById(id).innerText = (value).toFixed(2);
